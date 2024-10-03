@@ -21,7 +21,6 @@ size_t Str_getLength(const char *pcSrc)
 /* Copies the contents of the source pcSrc to the destination pcDest and 
 returns it. */
 char* Str_copy(char *pcDest, const char *pcSrc) {
-   char *pcRefDest;
    assert(pcDest != NULL && pcSrc != NULL);
    while (*pcSrc != '\0') {
       *pcDest = *pcSrc;
