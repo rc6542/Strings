@@ -25,7 +25,7 @@ static size_t replaceAndWrite(const char *pcLine,
    assert(pcLine != NULL && pcFrom != NULL && pcTo != NULL);
 
    if (*pcFrom == '\0') {
-      printf("%s", pcLine);   
+      printf(pcLine);   
       return 0;
    }  
 
@@ -33,7 +33,7 @@ static size_t replaceAndWrite(const char *pcLine,
 
    while (*pcLine != '\0') {
       if (occurrence == NULL) {
-         printf("%s", pcLine);
+         printf(pcLine);
          break;
       }
 
@@ -42,7 +42,7 @@ static size_t replaceAndWrite(const char *pcLine,
          pcLine++;
       }
 
-      printf("%s", pcTo);
+      printf(pcTo);
       replacements++;
       pcLine = occurrence + Str_getLength(pcFrom);
 
