@@ -48,7 +48,7 @@ char* Str_concat(char *pcDest, const char *pcSrc) {
    }
 
    *pcRefDest = '\0';
-   return *pcDest;
+   return pcDest;
 }
 
 /* Compares str1 and str2, returns 0 if they are equal. Returns -1 if 
