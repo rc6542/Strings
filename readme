@@ -56,7 +56,7 @@ disagreements with them? Copy the splint warnings here, and express your
 disagreement after each warning. If there are no warnings, then write
 "None."
 
-
+None.
 
 ------------------------------------------------------------------------
 What warnings does critTer generate on stra.c, and what are your
@@ -64,7 +64,7 @@ disagreements with them? Copy the critTer warnings here, and express
 your disagreement after each warning. If there are no warnings, then
 write "None."
 
-
+None.
 
 ------------------------------------------------------------------------
 What warnings does splint generate on strp.c, and what are your
@@ -103,6 +103,11 @@ Is it possible for Str_copy or Str_concat to call assert to verify
 that the destination memory area specified by the caller is large
 enough? Explain.
 
-
+No, since both array and pointer notations ultimately refer to pointers
+towards the arrays, there is no information about the allocated size of
+pcDest. Hence, you cannot call assert to verify the memory area is large
+enough because you need to know the size of the destination beforehand.
+You would have to probably use the heap and dynamic memory or add an 
+additional argument that serves as the max size of the memory area.
 
 ------------------------------------------------------------------------
