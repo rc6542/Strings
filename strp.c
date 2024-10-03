@@ -79,6 +79,7 @@ not found in pcHaystack. */
 char *Str_search(const char *pcHaystack, const char *pcNeedle) {
    assert(pcHaystack != NULL && pcNeedle != NULL);
    
+   /* if pcNeedle is empty, return pcHaystack */
    if (*pcNeedle == '\0') {
       return (char *)pcHaystack;
    }
@@ -87,12 +88,14 @@ char *Str_search(const char *pcHaystack, const char *pcNeedle) {
       const char *haystackPoint = pcHaystack;
       const char *needlePoint = pcNeedle;
       
+      /* if matching and are not null byte, increment pointers */
       while (*haystackPoint != '\0' && *needlePoint != '\0' && *
          haystackPoint == *needlePoint) {
             haystackPoint++;
             needlePoint++;
          }
 
+      /* if the end of the needle is reached */
       if (*needlePoint == '\0') {
          return (char *)pcHaystack;
       }

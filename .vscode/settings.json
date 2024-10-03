@@ -59,5 +59,6 @@
   "files.associations": {
     "stddef.h": "c",
     "assert.h": "c"
-  }
+  },
+  "C_Cpp.errorSquiggles": "disabled"
 }
