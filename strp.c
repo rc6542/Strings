@@ -69,7 +69,7 @@ int Str_compare(const char *str1, const char *str2) {
       str1++;
       str2++;
     }
-    
+
     return (int)(*str1 - *str2);
 }
 
@@ -91,7 +91,7 @@ char *Str_search(const char *pcHaystack, const char *pcNeedle) {
          haystackPoint == *needlePoint) {
             haystackPoint++;
             needlePoint++;
-        }
+         }
 
       if (*needlePoint == '\0') {
          return (char *)pcHaystack;
