@@ -32,7 +32,7 @@ static size_t replaceAndWrite(const char *pcLine,
 
    while (*pcLine != '\0') {
       while (pcLine != occurence) {
-         printf ("%s", *pcLine);
+         printf ("%s", pcLine);
          pcLine++;
       }
       replacements++;
