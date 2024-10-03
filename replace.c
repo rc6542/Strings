@@ -21,21 +21,21 @@ static size_t replaceAndWrite(const char *pcLine,
                               const char *pcFrom, const char *pcTo)
 {
    size_t replacements;
-   char *occurence;
+   char *occurrence;
 
    if (*pcFrom == '\0') {
       printf("%s", pcLine);   
       return 0;
    }
 
-   occurence = Str_search(pcFrom, pcTo);
+   occurrence = Str_search(pcFrom, pcTo);
 
    while (*pcLine != '\0') {
-      if (occurence == NULL) {
+      if (occurrence == NULL) {
          printf("%s", pcLine);
       }
 
-      while (pcLine < occurence) {
+      while (pcLine < occurrence) {
          putchar(*pcLine);
          pcLine++;
       }
