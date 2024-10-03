@@ -26,6 +26,7 @@ static size_t replaceAndWrite(const char *pcLine,
 
    assert(pcLine != NULL && pcFrom != NULL && pcTo != NULL);
 
+   /* empty string scenario */
    if (*pcFrom == '\0') {
       printf("%s", pcLine);   
       return 0;
@@ -34,16 +35,21 @@ static size_t replaceAndWrite(const char *pcLine,
    occurrence = Str_search(pcLine, pcFrom);
 
    while (*pcLine != '\0') {
+      /* no more occurences */
       if (occurrence == NULL) {
             printf("%s", pcLine);
             break;
         }
 
+      /* prints pcLine until replacement pointer */
       while (pcLine < occurrence) {
          putchar(*pcLine);
          pcLine++;
       }
 
+      /* prints the replacement string, increments total replacements,
+      finds where pcLine would continue from, and then finds next
+      possible occurence of pcFrom */
       printf("%s", pcTo);
       replacements++;
       pcLine = occurrence + lengthOfFrom;
