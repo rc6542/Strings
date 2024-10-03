@@ -113,59 +113,55 @@ extern void __assert (const char *__assertion, const char *__file, int __line)
 # 8 "stra.c" 2
 
 
-
-
-# 11 "stra.c"
+# 9 "stra.c"
 size_t Str_getLength(const char pcSrc[])
 {
    size_t uLength = 0;
    
-# 14 "stra.c" 3 4
+# 12 "stra.c" 3 4
   ((
-# 14 "stra.c"
+# 12 "stra.c"
   pcSrc != 
-# 14 "stra.c" 3 4
+# 12 "stra.c" 3 4
   ((void *)0)) ? (void) (0) : __assert_fail (
-# 14 "stra.c"
+# 12 "stra.c"
   "pcSrc != NULL"
-# 14 "stra.c" 3 4
-  , "stra.c", 14, __extension__ __PRETTY_FUNCTION__))
-# 14 "stra.c"
+# 12 "stra.c" 3 4
+  , "stra.c", 12, __extension__ __PRETTY_FUNCTION__))
+# 12 "stra.c"
                        ;
    while (pcSrc[uLength] != '\0')
       uLength++;
    return uLength;
 }
 
-
-
 char* Str_copy(char pcDest[], const char pcSrc[]) {
     size_t i = 0;
     
-# 24 "stra.c" 3 4
+# 20 "stra.c" 3 4
    ((
-# 24 "stra.c"
+# 20 "stra.c"
    pcDest != 
-# 24 "stra.c" 3 4
+# 20 "stra.c" 3 4
    ((void *)0)) ? (void) (0) : __assert_fail (
-# 24 "stra.c"
+# 20 "stra.c"
    "pcDest != NULL"
-# 24 "stra.c" 3 4
-   , "stra.c", 24, __extension__ __PRETTY_FUNCTION__))
-# 24 "stra.c"
+# 20 "stra.c" 3 4
+   , "stra.c", 20, __extension__ __PRETTY_FUNCTION__))
+# 20 "stra.c"
                          ;
     
-# 25 "stra.c" 3 4
+# 21 "stra.c" 3 4
    ((
-# 25 "stra.c"
+# 21 "stra.c"
    pcSrc != 
-# 25 "stra.c" 3 4
+# 21 "stra.c" 3 4
    ((void *)0)) ? (void) (0) : __assert_fail (
-# 25 "stra.c"
+# 21 "stra.c"
    "pcSrc != NULL"
-# 25 "stra.c" 3 4
-   , "stra.c", 25, __extension__ __PRETTY_FUNCTION__))
-# 25 "stra.c"
+# 21 "stra.c" 3 4
+   , "stra.c", 21, __extension__ __PRETTY_FUNCTION__))
+# 21 "stra.c"
                         ;
     while (pcSrc[i] != '\0') {
         pcDest[i] = pcSrc[i];
@@ -176,26 +172,24 @@ char* Str_copy(char pcDest[], const char pcSrc[]) {
     return pcDest;
 }
 
-
-
 char* Str_concat(char pcDest[], const char pcSrc[]) {
     size_t i = 0, j = 0;
     
-# 39 "stra.c" 3 4
+# 33 "stra.c" 3 4
    ((
-# 39 "stra.c"
+# 33 "stra.c"
    pcSrc != 
-# 39 "stra.c" 3 4
+# 33 "stra.c" 3 4
    ((void *)0) 
-# 39 "stra.c"
+# 33 "stra.c"
    && pcDest != 
-# 39 "stra.c" 3 4
+# 33 "stra.c" 3 4
    ((void *)0)) ? (void) (0) : __assert_fail (
-# 39 "stra.c"
+# 33 "stra.c"
    "pcSrc != NULL && pcDest != NULL"
-# 39 "stra.c" 3 4
-   , "stra.c", 39, __extension__ __PRETTY_FUNCTION__))
-# 39 "stra.c"
+# 33 "stra.c" 3 4
+   , "stra.c", 33, __extension__ __PRETTY_FUNCTION__))
+# 33 "stra.c"
                                           ;
 
     while (pcDest[i] != '\0') {
@@ -210,27 +204,24 @@ char* Str_concat(char pcDest[], const char pcSrc[]) {
     return pcDest;
 }
 
-
-
-
 int Str_compare(const char str1[], const char str2[]) {
     size_t i = 0;
     
-# 58 "stra.c" 3 4
+# 49 "stra.c" 3 4
    ((
-# 58 "stra.c"
+# 49 "stra.c"
    str1 != 
-# 58 "stra.c" 3 4
+# 49 "stra.c" 3 4
    ((void *)0) 
-# 58 "stra.c"
+# 49 "stra.c"
    && str2 != 
-# 58 "stra.c" 3 4
+# 49 "stra.c" 3 4
    ((void *)0)) ? (void) (0) : __assert_fail (
-# 58 "stra.c"
+# 49 "stra.c"
    "str1 != NULL && str2 != NULL"
-# 58 "stra.c" 3 4
-   , "stra.c", 58, __extension__ __PRETTY_FUNCTION__))
-# 58 "stra.c"
+# 49 "stra.c" 3 4
+   , "stra.c", 49, __extension__ __PRETTY_FUNCTION__))
+# 49 "stra.c"
                                        ;
 
     while (str1[i] != '\0' && str2[i] != '\0') {
@@ -243,27 +234,24 @@ int Str_compare(const char str1[], const char str2[]) {
     return (int)(str1[i] - str2[i]);
 }
 
-
-
-
 char *Str_search(const char pcHaystack[], const char pcNeedle[]) {
     size_t i, j;
     
-# 75 "stra.c" 3 4
+# 63 "stra.c" 3 4
    ((
-# 75 "stra.c"
+# 63 "stra.c"
    pcHaystack != 
-# 75 "stra.c" 3 4
+# 63 "stra.c" 3 4
    ((void *)0) 
-# 75 "stra.c"
+# 63 "stra.c"
    && pcNeedle != 
-# 75 "stra.c" 3 4
+# 63 "stra.c" 3 4
    ((void *)0)) ? (void) (0) : __assert_fail (
-# 75 "stra.c"
+# 63 "stra.c"
    "pcHaystack != NULL && pcNeedle != NULL"
-# 75 "stra.c" 3 4
-   , "stra.c", 75, __extension__ __PRETTY_FUNCTION__))
-# 75 "stra.c"
+# 63 "stra.c" 3 4
+   , "stra.c", 63, __extension__ __PRETTY_FUNCTION__))
+# 63 "stra.c"
                                                  ;
 
 
@@ -286,8 +274,8 @@ char *Str_search(const char pcHaystack[], const char pcNeedle[]) {
     }
 
     return 
-# 96 "stra.c" 3 4
+# 84 "stra.c" 3 4
           ((void *)0)
-# 96 "stra.c"
+# 84 "stra.c"
               ;
 }

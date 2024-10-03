@@ -27,7 +27,7 @@ Str_getLength:
 	bne	.L3
 	adrp	x0, __PRETTY_FUNCTION__.4
 	add	x3, x0, :lo12:__PRETTY_FUNCTION__.4
-	mov	w2, 14
+	mov	w2, 12
 	adrp	x0, .LC0
 	add	x1, x0, :lo12:.LC0
 	adrp	x0, .LC1
@@ -77,7 +77,7 @@ Str_copy:
 	bne	.L7
 	adrp	x0, __PRETTY_FUNCTION__.3
 	add	x3, x0, :lo12:__PRETTY_FUNCTION__.3
-	mov	w2, 24
+	mov	w2, 20
 	adrp	x0, .LC0
 	add	x1, x0, :lo12:.LC0
 	adrp	x0, .LC2
@@ -89,7 +89,7 @@ Str_copy:
 	bne	.L9
 	adrp	x0, __PRETTY_FUNCTION__.3
 	add	x3, x0, :lo12:__PRETTY_FUNCTION__.3
-	mov	w2, 25
+	mov	w2, 21
 	adrp	x0, .LC0
 	add	x1, x0, :lo12:.LC0
 	adrp	x0, .LC1
@@ -156,7 +156,7 @@ Str_concat:
 .L13:
 	adrp	x0, __PRETTY_FUNCTION__.2
 	add	x3, x0, :lo12:__PRETTY_FUNCTION__.2
-	mov	w2, 39
+	mov	w2, 33
 	adrp	x0, .LC0
 	add	x1, x0, :lo12:.LC0
 	adrp	x0, .LC3
@@ -238,7 +238,7 @@ Str_compare:
 .L21:
 	adrp	x0, __PRETTY_FUNCTION__.1
 	add	x3, x0, :lo12:__PRETTY_FUNCTION__.1
-	mov	w2, 58
+	mov	w2, 49
 	adrp	x0, .LC0
 	add	x1, x0, :lo12:.LC0
 	adrp	x0, .LC4
@@ -330,7 +330,7 @@ Str_search:
 .L29:
 	adrp	x0, __PRETTY_FUNCTION__.0
 	add	x3, x0, :lo12:__PRETTY_FUNCTION__.0
-	mov	w2, 75
+	mov	w2, 63
 	adrp	x0, .LC0
 	add	x1, x0, :lo12:.LC0
 	adrp	x0, .LC5

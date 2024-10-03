@@ -113,24 +113,22 @@ extern void __assert (const char *__assertion, const char *__file, int __line)
 # 8 "strp.c" 2
 
 
-
-
-# 11 "strp.c"
+# 9 "strp.c"
 size_t Str_getLength(const char *pcSrc)
 {
    const char *pcEnd;
    
-# 14 "strp.c" 3 4
+# 12 "strp.c" 3 4
   ((
-# 14 "strp.c"
+# 12 "strp.c"
   pcSrc != 
-# 14 "strp.c" 3 4
+# 12 "strp.c" 3 4
   ((void *)0)) ? (void) (0) : __assert_fail (
-# 14 "strp.c"
+# 12 "strp.c"
   "pcSrc != NULL"
-# 14 "strp.c" 3 4
-  , "strp.c", 14, __extension__ __PRETTY_FUNCTION__))
-# 14 "strp.c"
+# 12 "strp.c" 3 4
+  , "strp.c", 12, __extension__ __PRETTY_FUNCTION__))
+# 12 "strp.c"
                        ;
    pcEnd = pcSrc;
    while (*pcEnd != '\0')
@@ -138,26 +136,24 @@ size_t Str_getLength(const char *pcSrc)
    return (size_t)(pcEnd - pcSrc);
 }
 
-
-
 char* Str_copy(char *pcDest, const char *pcSrc) {
    char *pcStart = pcDest;
    
-# 25 "strp.c" 3 4
+# 21 "strp.c" 3 4
   ((
-# 25 "strp.c"
+# 21 "strp.c"
   pcDest != 
-# 25 "strp.c" 3 4
+# 21 "strp.c" 3 4
   ((void *)0) 
-# 25 "strp.c"
+# 21 "strp.c"
   && pcSrc != 
-# 25 "strp.c" 3 4
+# 21 "strp.c" 3 4
   ((void *)0)) ? (void) (0) : __assert_fail (
-# 25 "strp.c"
+# 21 "strp.c"
   "pcDest != NULL && pcSrc != NULL"
-# 25 "strp.c" 3 4
-  , "strp.c", 25, __extension__ __PRETTY_FUNCTION__))
-# 25 "strp.c"
+# 21 "strp.c" 3 4
+  , "strp.c", 21, __extension__ __PRETTY_FUNCTION__))
+# 21 "strp.c"
                                          ;
 
    while (*pcSrc != '\0') {
@@ -171,26 +167,24 @@ char* Str_copy(char *pcDest, const char *pcSrc) {
    return pcStart;
 }
 
-
-
 char* Str_concat(char *pcDest, const char *pcSrc) {
    char *pcRefDest = pcDest;
    
-# 42 "strp.c" 3 4
+# 36 "strp.c" 3 4
   ((
-# 42 "strp.c"
+# 36 "strp.c"
   pcDest != 
-# 42 "strp.c" 3 4
+# 36 "strp.c" 3 4
   ((void *)0) 
-# 42 "strp.c"
+# 36 "strp.c"
   && pcSrc != 
-# 42 "strp.c" 3 4
+# 36 "strp.c" 3 4
   ((void *)0)) ? (void) (0) : __assert_fail (
-# 42 "strp.c"
+# 36 "strp.c"
   "pcDest != NULL && pcSrc != NULL"
-# 42 "strp.c" 3 4
-  , "strp.c", 42, __extension__ __PRETTY_FUNCTION__))
-# 42 "strp.c"
+# 36 "strp.c" 3 4
+  , "strp.c", 36, __extension__ __PRETTY_FUNCTION__))
+# 36 "strp.c"
                                          ;
 
    while (*pcRefDest != '\0') {
@@ -208,35 +202,32 @@ char* Str_concat(char *pcDest, const char *pcSrc) {
 }
 
 
-
-
-
 int Str_compare(const char *str1, const char *str2) {
    
-# 63 "strp.c" 3 4
+# 54 "strp.c" 3 4
   ((
-# 63 "strp.c"
+# 54 "strp.c"
   str1 != 
-# 63 "strp.c" 3 4
+# 54 "strp.c" 3 4
   ((void *)0)) ? (void) (0) : __assert_fail (
-# 63 "strp.c"
+# 54 "strp.c"
   "str1 != NULL"
-# 63 "strp.c" 3 4
-  , "strp.c", 63, __extension__ __PRETTY_FUNCTION__))
-# 63 "strp.c"
+# 54 "strp.c" 3 4
+  , "strp.c", 54, __extension__ __PRETTY_FUNCTION__))
+# 54 "strp.c"
                       ;
    
-# 64 "strp.c" 3 4
+# 55 "strp.c" 3 4
   ((
-# 64 "strp.c"
+# 55 "strp.c"
   str2 != 
-# 64 "strp.c" 3 4
+# 55 "strp.c" 3 4
   ((void *)0)) ? (void) (0) : __assert_fail (
-# 64 "strp.c"
+# 55 "strp.c"
   "str2 != NULL"
-# 64 "strp.c" 3 4
-  , "strp.c", 64, __extension__ __PRETTY_FUNCTION__))
-# 64 "strp.c"
+# 55 "strp.c" 3 4
+  , "strp.c", 55, __extension__ __PRETTY_FUNCTION__))
+# 55 "strp.c"
                       ;
 
    while (*str1 != '\0' && *str2 != '\0') {
@@ -250,26 +241,23 @@ int Str_compare(const char *str1, const char *str2) {
     return (int)(*str1 - *str2);
 }
 
-
-
-
 char *Str_search(const char *pcHaystack, const char *pcNeedle) {
    
-# 81 "strp.c" 3 4
+# 69 "strp.c" 3 4
   ((
-# 81 "strp.c"
+# 69 "strp.c"
   pcHaystack != 
-# 81 "strp.c" 3 4
+# 69 "strp.c" 3 4
   ((void *)0) 
-# 81 "strp.c"
+# 69 "strp.c"
   && pcNeedle != 
-# 81 "strp.c" 3 4
+# 69 "strp.c" 3 4
   ((void *)0)) ? (void) (0) : __assert_fail (
-# 81 "strp.c"
+# 69 "strp.c"
   "pcHaystack != NULL && pcNeedle != NULL"
-# 81 "strp.c" 3 4
-  , "strp.c", 81, __extension__ __PRETTY_FUNCTION__))
-# 81 "strp.c"
+# 69 "strp.c" 3 4
+  , "strp.c", 69, __extension__ __PRETTY_FUNCTION__))
+# 69 "strp.c"
                                                 ;
 
 
@@ -296,8 +284,8 @@ char *Str_search(const char *pcHaystack, const char *pcNeedle) {
       pcHaystack++;
    }
    return 
-# 106 "strp.c" 3 4
+# 94 "strp.c" 3 4
          ((void *)0)
-# 106 "strp.c"
+# 94 "strp.c"
              ;
 }
