@@ -31,18 +31,18 @@ static size_t replaceAndWrite(const char *pcLine,
    occurence = Str_search(pcFrom, pcTo);
 
    while (*pcLine != '\0') {
-      if (occurence = NULL) {
-         printf("%s", pcLine)
+      if (occurence == NULL) {
+         printf("%s", pcLine);
       }
 
-      while (pcLine < occurrence) {
+      while (pcLine < occurence) {
          putchar(*pcLine);
          pcLine++;
       }
 
       printf("%s", pcTo);
         replacements++;
-        pcLine = occurrence + strlen(pcFrom);
+        pcLine = occurrence + str_len(pcFrom);
    }
    
    return replacements;
