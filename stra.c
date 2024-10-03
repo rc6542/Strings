@@ -50,7 +50,7 @@ char* Str_concat(char pcDest[], const char pcSrc[]) {
 }
 
 /* Compares str1 and str2, returns 0 if they are equal.  */
-char* Str_compare(char str1[], const char str2[]) {
+int Str_compare(char str1[], const char str2[]) {
     size_t i = 0;
     assert(str1 != NULL && str2 != NULL);
 
