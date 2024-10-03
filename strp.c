@@ -6,8 +6,6 @@
 #include "str.h"
 #include <assert.h>
 
-/* Returns the length of the string pcSrc in pointer format, copied from 
-assignment page. */
 size_t Str_getLength(const char *pcSrc)
 {
    const char *pcEnd;
@@ -18,8 +16,6 @@ size_t Str_getLength(const char *pcSrc)
    return (size_t)(pcEnd - pcSrc);
 }
 
-/* Copies the contents of the source pcSrc to the destination pcDest and 
-returns it. */
 char* Str_copy(char *pcDest, const char *pcSrc) {
    char *pcStart = pcDest;  
    assert(pcDest != NULL && pcSrc != NULL);
@@ -35,8 +31,6 @@ char* Str_copy(char *pcDest, const char *pcSrc) {
    return pcStart;  
 }
 
-/* Concatenates the contents of pcSrc to the end of pcDest and 
-returns it. */
 char* Str_concat(char *pcDest, const char *pcSrc) {
    char *pcRefDest = pcDest;
    assert(pcDest != NULL && pcSrc != NULL);
@@ -55,10 +49,7 @@ char* Str_concat(char *pcDest, const char *pcSrc) {
    return pcDest;
 }
 
-/* Compares str1 and str2, returns 0 if they are equal. Returns -1 if 
-str1 is lexicographically less than str2, and 1 if str2 is 
-lexicographically greater than str1. 
-*/
+
 int Str_compare(const char *str1, const char *str2) {
    assert(str1 != NULL);
    assert(str2 != NULL);
@@ -74,9 +65,6 @@ int Str_compare(const char *str1, const char *str2) {
     return (int)(*str1 - *str2);
 }
 
-/* Returns a pointer to the first occurrence in pcNeedle in the entire 
-sequence of characters pcHaystack, or a null pointer if the pcNeedle is
-not found in pcHaystack. */
 char *Str_search(const char *pcHaystack, const char *pcNeedle) {
    assert(pcHaystack != NULL && pcNeedle != NULL);
    
