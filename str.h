@@ -19,7 +19,7 @@ returns it. */
 char* Str_concat(char pcDest[], const char pcSrc[]);
 
 /* Compares str1 and str2, returns 0 if they are equal. */
-char* Str_compare(char str1[], const char str2[]);
+char* Str_compare(char *str1, const char *str2);
 
 /* Returns a pointer to the first occurrence in pcNeedle in the entire 
 sequence of characters pcHaystack, or a null pointer if the pcNeedle is
