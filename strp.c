@@ -70,7 +70,7 @@ int Str_compare(const char *str1, const char *str2) {
         str2++;
     }
 
-    return (int)(str1[i] - str2[i]);
+    return (int)(*str1 - *str2);
 }
 
 /* Returns a pointer to the first occurrence in pcNeedle in the entire 
