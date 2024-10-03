@@ -28,7 +28,7 @@ char* Str_copy(char *pcDest, const char *pcSrc) {
       pcDest++;
       pcSrc++;
    }
-   return pcRefDest;
+   return pcDest;
 }
 
 /* Concatenates the contents of pcSrc to the end of pcDest and 
