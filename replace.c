@@ -20,30 +20,35 @@
 static size_t replaceAndWrite(const char *pcLine,
                               const char *pcFrom, const char *pcTo)
 {
-   size_t replacements;
+   size_t replacements = 0;
    char *occurrence;
    assert(pcLine != NULL && pcFrom != NULL && pcTo != NULL);
 
    if (*pcFrom == '\0') {
-      printf(pcLine);   
+      printf("%s", pcLine);   
       return 0;
    }  
 
    occurrence = Str_search(pcLine, pcFrom);
 
    while (*pcLine != '\0') {
-      if (pcLine != occurrence) {
+      if (occurrence == NULL) {
+            printf("%s", pcLine);
+            break;
+        }
+
+      while (pcLine < occurrence) {
          putchar(*pcLine);
          pcLine++;
       }
-      else {
-         printf(pcTo);
-         pcLine = pcLine + Str_getLength(pcFrom);
-         occurrence = Str_search(pcLine, pcFrom);
-         replacements++;
-      }
+
+      printf("%s", pcTo);
+      replacements++;
+      pcLine = occurrence + Str_getLength(pcFrom);
+
+      occurrence = Str_search(pcLine, pcFrom);
    }
-   
+
    return replacements;
 }
 
