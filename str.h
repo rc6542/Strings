@@ -7,14 +7,14 @@
 #define STR
 #include <stddef.h>
 
-/* Returns the length of source array. */
+/* Returns the length of source array pcSrc. */
 size_t Str_getLength(const char pcSrc[]);
 
-/* Copies the contents of the source to the destination and returns it. 
+/* Copies the contents of pcSrc to the pcDest and returns it. 
 */
 char* Str_copy(char pcDest[], const char pcSrc[]);
 
-/* Concatenates the contents of source to the end of destination and 
+/* Concatenates the contents of pcSrc to the end of pcDest and 
 returns it. */
 char* Str_concat(char pcDest[], const char pcSrc[]);
 
