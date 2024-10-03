@@ -22,6 +22,8 @@ static size_t replaceAndWrite(const char *pcLine,
 {
    size_t replacements = 0;
    char *occurrence;
+   size_t lengthOfFrom = Str_getLength(pcFrom);
+
    assert(pcLine != NULL && pcFrom != NULL && pcTo != NULL);
 
    if (*pcFrom == '\0') {
@@ -44,8 +46,7 @@ static size_t replaceAndWrite(const char *pcLine,
 
       printf("%s", pcTo);
       replacements++;
-      pcLine = occurrence + Str_getLength(pcFrom);
-
+      pcLine = occurrence + lengthOfFrom;
       occurrence = Str_search(pcLine, pcFrom);
    }
 
