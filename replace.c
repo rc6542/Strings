@@ -23,24 +23,28 @@ static size_t replaceAndWrite(const char *pcLine,
    size_t replacements;
    char *occurence;
 
-   if(*pcFrom == '\0') {
-      printf("%s", pcLine);
+   if (*pcFrom == '\0') {
+      printf("%s", pcLine);   
       return 0;
    }
 
    occurence = Str_search(pcFrom, pcTo);
 
    while (*pcLine != '\0') {
-      while (pcLine != occurence) {
-         printf ("%s", pcLine);
+      if (occurence = NULL) {
+         printf("%s", pcLine)
+      }
+
+      while (pcLine < occurrence) {
+         putchar(*pcLine);
          pcLine++;
       }
-      replacements++;
 
       printf("%s", pcTo);
-      pcLine = occurence + *pcFrom;
-      occurence = Str_search(pcFrom, pcTo);
+        replacements++;
+        pcLine = occurrence + strlen(pcFrom);
    }
+   
    return replacements;
 }
 
