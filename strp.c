@@ -56,7 +56,8 @@ char* Str_concat(char *pcDest, const char *pcSrc) {
 }
 
 /* Compares str1 and str2, returns 0 if they are equal. Returns -1 if 
-str1 reaches '\0' before str2, and 1 if str2 reaches '\0' before str1. 
+str1 is lexicographically less than str2, and 1 if str2 is 
+lexicographically greater than str1. 
 */
 int Str_compare(const char *str1, const char *str2) {
    assert(str1 != NULL);
