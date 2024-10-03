@@ -22,17 +22,17 @@ size_t Str_getLength(const char *pcSrc)
 returns it. */
 char* Str_copy(char *pcDest, const char *pcSrc) {
    char *pcStart = pcDest;  
-    assert(pcDest != NULL && pcSrc != NULL);
+   assert(pcDest != NULL && pcSrc != NULL);
 
-    while (*pcSrc != '\0') {
+   while (*pcSrc != '\0') {
         *pcDest = *pcSrc;
         pcDest++;
         pcSrc++;
-    }
+   }
 
-    *pcDest = '\0';
+   *pcDest = '\0';
 
-    return pcStart;  
+   return pcStart;  
 }
 
 /* Concatenates the contents of pcSrc to the end of pcDest and 
