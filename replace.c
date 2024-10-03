@@ -21,7 +21,7 @@ static size_t replaceAndWrite(const char *pcLine,
                               const char *pcFrom, const char *pcTo)
 {
    size_t replacements;
-   const char *occurence;
+   char *occurence;
 
    if(*pcFrom == '\0') {
       printf("%s", pcLine);
