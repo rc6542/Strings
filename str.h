@@ -16,7 +16,7 @@ char* Str_copy(char pcDest[], const char pcSrc[]);
 
 /* Concatenates the contents of pcSrc to the end of pcDest and 
 returns it. */
-char* Str_concat(char pcDest[], const char pcSrc[]);
+char* Str_concat(const char pcDest[], const char pcSrc[]);
 
 /* Compares str1 and str2, returns 0 if they are equal. */
 int Str_compare(char *str1, const char *str2);
