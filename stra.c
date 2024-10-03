@@ -17,8 +17,8 @@ size_t Str_getLength(const char pcSrc[])
    return uLength;
 }
 
-/* Copies the contents of the source to the destination and returns it. 
-*/
+/* Copies the contents of the source pcSrc to the destination pcDest and 
+returns it. */
 char* Str_copy(char pcDest[], const char pcSrc[]) {
     size_t i = 0;
     assert(pcDest != NULL);
@@ -32,8 +32,8 @@ char* Str_copy(char pcDest[], const char pcSrc[]) {
     return pcDest;
 }
 
-/* Concatenates the contents of source to the end of destination and 
-returns it. */
+/* Concatenates the contents of source pcSrc to the end of destination 
+pcDest and returns it. */
 char* Str_concat(char pcDest[], const char pcSrc[]) {
     size_t i = 0, j = 0;
     assert(pcSrc != NULL && pcDest != NULL);
@@ -50,7 +50,9 @@ char* Str_concat(char pcDest[], const char pcSrc[]) {
     return pcDest;
 }
 
-/* Compares str1 and str2, returns 0 if they are equal.  */
+/* Compares str1 and str2, returns 0 if they are equal. Returns -1 if 
+str1 reaches '\0' before str2, and 1 if str2 reaches '\0' before str1. 
+*/
 int Str_compare(const char str1[], const char str2[]) {
     size_t i = 0;
     assert(str1 != NULL && str2 != NULL);
@@ -85,7 +87,7 @@ char *Str_search(const char pcHaystack[], const char pcNeedle[]) {
             j++;
         }
 
-        /* if we reached the end of pcNeedle, we found a full match */
+        /* if we reached the end of pcNeedle, a full match found */
         if (pcNeedle[j] == '\0') {
             return (char *)&pcHaystack[i];
         }
